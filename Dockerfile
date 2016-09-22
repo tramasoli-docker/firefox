@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y firefox
+RUN apt-get update && apt-get install -y firefox sudo && rm -rf /var/lib/apt/lists/*
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
